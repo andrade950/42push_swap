@@ -1,5 +1,7 @@
 # push_swap
 
+[Read in English](README.md)
+
 Este projeto tem como objetivo a implementação de um algoritmo eficiente para ordenação de uma pilha de inteiros, utilizando um conjunto limitado de operações em C.
 
 - **Objetivo**: Desenvolver um programa, `push_swap`, que ordene uma pilha de inteiros utilizando o menor número possível de operações predefinidas. O objetivo é implementar um algoritmo de ordenação eficiente, respeitando as restrições do projeto.
