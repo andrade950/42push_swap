@@ -41,34 +41,34 @@ executar_push_swap() {
     echo $movimentos_count
 }
 
-# Contadores para execuções com menos de 600, 700 e 5500 movimentos
+# Contadores para execuções
 menos_600=0
 menos_700=0
 menos_5500=0
+menos_7000=0
 
 excedeu_700=0
 excedeu_5500=0
+excedeu_7000=0
 excedeu_12=0  # Novo contador para execuções com mais de 12 movimentos (para 5 números)
 
 # Função para imprimir os movimentos coloridos
 imprimir_com_cor() {
-
-    # Verifica a quantidade de números para determinar a cor
     if [ $quantidade_numeros -eq 100 ]; then
-        # Para 100 números:
         if [ $movimentos -lt 600 ]; then
-            echo -e "${VERDE}MOVIMENTOS: $movimentos${RESET}"  # Verde para abaixo de 600
+            echo -e "${VERDE}MOVIMENTOS: $movimentos${RESET}"
         elif [ $movimentos -ge 600 ] && [ $movimentos -le 700 ]; then
-            echo -e "${MAGENTA}MOVIMENTOS: $movimentos${RESET}"  # Magenta para entre 600 e 700
+            echo -e "${MAGENTA}MOVIMENTOS: $movimentos${RESET}"
         else
-            echo -e "${VERMELHO}MOVIMENTOS: $movimentos${RESET}"  # Vermelho para acima de 700
+            echo -e "${VERMELHO}MOVIMENTOS: $movimentos${RESET}"
         fi
-    else
-        # Para mais de 100 números:
+    elif [ $quantidade_numeros -eq 500 ]; then
         if [ $movimentos -lt 5500 ]; then
-            echo -e "${VERDE}MOVIMENTOS: $movimentos${RESET}"  # Verde para abaixo de 5500
+            echo -e "${VERDE}MOVIMENTOS: $movimentos${RESET}"
+        elif [ $movimentos -ge 5500 ] && [ $movimentos -le 7000 ]; then
+            echo -e "${MAGENTA}MOVIMENTOS: $movimentos${RESET}"
         else
-            echo -e "${VERMELHO}MOVIMENTOS: $movimentos${RESET}"  # Vermelho para acima de 5500
+            echo -e "${VERMELHO}MOVIMENTOS: $movimentos${RESET}"
         fi
     fi
 }
@@ -83,14 +83,35 @@ do
 
     imprimir_com_cor $movimentos
 
-    # Verifica se a execução ultrapassou 700 movimentos para 100 números e exibe a mensagem em vermelho
-    if [ $quantidade_numeros -eq 100 ] && [ $movimentos -gt 700 ]; then
-    	echo -e "${VERMELHO}Execução $i ultrapassou 700 movimentos com $quantidade_numeros números!${RESET}"
-        ((excedeu_700++))
+    # Contadores para 100 números
+    if [ $quantidade_numeros -eq 100 ]; then
+        if [ $movimentos -gt 700 ]; then
+            echo -e "${VERMELHO}Execução $i ultrapassou 700 movimentos com $quantidade_numeros números!${RESET}"
+            ((excedeu_700++))
+        fi
+        if [ $movimentos -lt 600 ]; then
+            ((menos_600++))
+        fi
+        if [ $movimentos -lt 700 ]; then
+            ((menos_700++))
+        fi
     fi
-    if [ $quantidade_numeros -eq 500 ] && [ $movimentos -gt 5500 ]; then
-    	echo -e "${VERMELHO}Execução $i ultrapassou 5500 movimentos com $quantidade_numeros números!${RESET}"
-        ((excedeu_5500++))
+
+    # Contadores para 500 números
+    if [ $quantidade_numeros -eq 500 ]; then
+        if [ $movimentos -gt 7000 ]; then
+            echo -e "${VERMELHO}Execução $i ultrapassou 7000 movimentos com $quantidade_numeros números!${RESET}"
+            ((excedeu_7000++))
+        elif [ $movimentos -gt 5500 ]; then
+            echo -e "${VERMELHO}Execução $i ultrapassou 5500 movimentos com $quantidade_numeros números!${RESET}"
+            ((excedeu_5500++))
+        fi
+        if [ $movimentos -lt 5500 ]; then
+            ((menos_5500++))
+        fi
+        if [ $movimentos -lt 7000 ]; then
+            ((menos_7000++))
+        fi
     fi
 
     # Nova verificação para 5 números
@@ -99,43 +120,24 @@ do
         ((excedeu_12++))
     fi
 
-    # Conta execuções com menos de 600, 700 e 5500 movimentos
-    if [ $movimentos -lt 600 ]; then
-        menos_600=$((menos_600 + 1))
-    fi
-
-    if [ $movimentos -lt 700 ]; then
-        menos_700=$((menos_700 + 1))
-    fi
-
-    if [ $movimentos -lt 5500 ]; then
-        menos_5500=$((menos_5500 + 1))
-    fi
-
     echo "══════════════════════════════════════"
 done
 
-# Adiciona a verificação para exibir as execuções com menos de 600 e 700 movimentos somente se a quantidade de números for <= 150
-if [ $quantidade_numeros -le 150 ] && [ $quantidade_numeros -gt 15 ]; then
-    echo -e "${BRANCO}Execuções com menos de ${VERDE}600 ${BRANCO}movimentos: $menos_600${RESET}"
-    echo -e "${BRANCO}Execuções com menos de ${AMARELO}700 ${BRANCO}movimentos: $menos_700${RESET}"
-fi
-
-# Adiciona a verificação para exibir as execuções com menos de 5500 movimentos somente se a quantidade de números for > 150 e <= 500
-if [ $quantidade_numeros -gt 150 ] && [ $quantidade_numeros -le 500 ]; then
-    echo -e "${BRANCO}Execuções com menos de ${VERDE}5500${BRANCO} movimentos: $menos_5500${RESET}"
-fi
-
-# Exibe as mensagens sobre execuções que ultrapassaram os limites de movimentos
+# Exibir estatísticas para 100 números
 if [ $quantidade_numeros -eq 100 ]; then
-    echo -e "${BRANCO}Execuções com mais de ${VERMELHO}700${BRANCO} movimentos (para 100 números): $excedeu_700${RESET}"
+    echo -e "${BRANCO}Execuções com menos de ${VERDE}600${BRANCO} movimentos: $menos_600${RESET}"
+    echo -e "${BRANCO}Execuções com menos de ${AMARELO}700${BRANCO} movimentos: $menos_700${RESET}"
+    echo -e "${BRANCO}Execuções com mais de ${VERMELHO}700${BRANCO} movimentos: $excedeu_700${RESET}"
 fi
 
-if [ $quantidade_numeros -gt 500 ]; then
-    echo -e "${BRANCO}Execuções com mais de ${VERMELHO}5500${BRANCO} movimentos (para 500 números): $excedeu_5500${RESET}"
+# Exibir estatísticas para 500 números
+if [ $quantidade_numeros -eq 500 ]; then
+    echo -e "${BRANCO}Execuções com menos de ${VERDE}5500${BRANCO} movimentos: $menos_5500${RESET}"
+    echo -e "${BRANCO}Execuções com menos de ${AMARELO}7000${BRANCO} movimentos: $menos_7000${RESET}"
+    echo -e "${BRANCO}Execuções com mais de ${VERMELHO}7000${BRANCO} movimentos: $excedeu_7000${RESET}"
 fi
 
-# Exibe a mensagem para execuções com mais de 12 movimentos (para 5 números)
+# Exibir estatísticas para 5 números
 if [ $quantidade_numeros -le 15 ]; then
     echo -e "${BRANCO}Execuções com mais de ${VERMELHO}12${BRANCO} movimentos (para 5 números): $excedeu_12${RESET}"
 fi
