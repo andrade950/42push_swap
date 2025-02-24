@@ -42,7 +42,7 @@ This project aims to implement an efficient algorithm for sorting an integer sta
   - **Testing with 100 and 500 numbers**:
   <table style="border-collapse: collapse; border: none;">
     <tr>
-      <td></td>
+      <td><img width="550" src="imgs/100.png"></td>
       <td><img width="550" src="imgs/500.png"></td>
     </tr>
   </table>
