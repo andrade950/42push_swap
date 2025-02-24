@@ -43,7 +43,7 @@ Este projeto tem como objetivo a implementação de um algoritmo eficiente para 
 - **Teste com 100 e 500 números**:
    <table style="border-collapse: collapse; border: none;">
     <tr>
-      <td><img width="550" src="imgs/100.png"></td>
+      <td></td>
       <td><img width="550" src="imgs/500.png"></td>
     </tr>
   </table>
