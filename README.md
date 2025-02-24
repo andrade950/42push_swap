@@ -25,12 +25,6 @@ Um projeto otimizado de algoritmo de ordenação utilizando duas pilhas e um con
   | `rrb`      | Roda `b` ao contrário (desloca todos os elementos para baixo, o último torna-se o primeiro) |
   | `rrr`      | Executa `rra` e `rrb` simultaneamente                                      |
 
-- **Vídeos Demonstrativos**:
-  - Ordenação de 100 números  
-    <iframe width="560" height="315" src="https:/www.youtube.com/watch?v=ZgcGJJVHR8Q" frameborder="0"></iframe>
-  - Ordenação de 500 números  
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/COLOQUE_AQUI_O_ID_DO_VÍDEO" frameborder="0" allowfullscreen></iframe>
-
 - **Tester do push_swap**:
   - Criado um script para testar automaticamente a performance e a eficiência do `push_swap`.
   - Para utilizar o tester, execute:
