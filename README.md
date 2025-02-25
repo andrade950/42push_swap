@@ -27,6 +27,11 @@ This project aims to implement an efficient algorithm for sorting an integer sta
   | `rrb`      | Reverse rotates `b` (shifts all elements down by one, last element becomes first) |
   | `rrr`      | Executes `rra` and `rrb` simultaneously                                    |
 
+
+- **Average Moves**:
+  - On average, for 100 numbers, `push_swap` performs 550 moves.
+  - On average, for 500 numbers, `push_swap` performs 5050 moves.
+
 - **Demonstration Videos**:
   - ![Ordenação de 100 números](https://github.com/andrade950/42push_swap/issues/1)
 
