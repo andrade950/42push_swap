@@ -27,6 +27,10 @@ Este projeto tem como objetivo a implementação de um algoritmo eficiente para 
   | `rrb`      | Roda `b` ao contrário (desloca todos os elementos para baixo, o último torna-se o primeiro) |
   | `rrr`      | Executa `rra` e `rrb` simultaneamente                                                       |
 
+- **Média de Movimentos**:
+  - Em média, para 100 números, `push_swap` realiza 550 movimentos.
+  - Em média, para 500 números, `push_swap` realiza 5050 movimentos. 
+
 - **Vídeos Demonstrativos**:
   - ![Ordenação de 100 números](https://github.com/andrade950/42push_swap/issues/1)
   
