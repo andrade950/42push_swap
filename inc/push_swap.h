@@ -108,6 +108,6 @@ int		ft_range(const char *str);
 int		validate_range(char **args);
 
 //Extra
-//void	printlist(t_node *head)
+//void	printstack(t_node *head)
 
 #endif
