@@ -26,7 +26,8 @@ int	main(int ac, char **av)
 		args = ft_split(av[1], ' ');
 	else
 		args = av + 1;
-	error(args);
+	if (error(args))
+		return (1);
 	create_stack(&stack_a, args);
 	init_index(&stack_a);
 	if (!is_sorted(stack_a))
@@ -38,7 +39,7 @@ int	main(int ac, char **av)
 	return (0);
 }
 
-/*void	printlist(t_node *head)
+/*void	printstack(t_node *head)
 {
 	t_node  *tmp;	tmp = head;
 	while (tmp != NULL)
