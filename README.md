@@ -30,10 +30,12 @@ This project aims to implement an efficient algorithm for sorting an integer sta
 
 - **Average Moves**:
   - On average, for 100 numbers, `push_swap` performs 550 moves.
+    
+    - ![Image](https://github.com/user-attachments/assets/14661d9d-c02a-4f53-8264-b6595f4f4bf1)
+  
   - On average, for 500 numbers, `push_swap` performs 5050 moves.
-
-- **Demonstration Videos**:
-  - ![Ordenação de 100 números](https://github.com/andrade950/42push_swap/issues/1)
+ 
+    - ![Image](https://github.com/user-attachments/assets/a0012241-d929-46ca-8581-4f85573a1d52)
 
 - **push_swap Tester**:
   - A script was created to automatically test the performance and efficiency of `push_swap`.
