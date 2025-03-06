@@ -29,11 +29,12 @@ Este projeto tem como objetivo a implementação de um algoritmo eficiente para 
 
 - **Média de Movimentos**:
   - Em média, para 100 números, `push_swap` realiza 550 movimentos.
-  - Em média, para 500 números, `push_swap` realiza 5050 movimentos. 
-
-- **Vídeos Demonstrativos**:
-  - ![Ordenação de 100 números](https://github.com/andrade950/42push_swap/issues/1)
+ 
+    - ![Image](https://github.com/user-attachments/assets/14661d9d-c02a-4f53-8264-b6595f4f4bf1)
   
+  - Em média, para 500 números, `push_swap` realiza 5050 movimentos.
+
+    - ![Image](https://github.com/user-attachments/assets/a0012241-d929-46ca-8581-4f85573a1d52)
 
 - **Tester do push_swap**:
   - Criado um script para testar automaticamente a performance e a eficiência do `push_swap`.
