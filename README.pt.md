@@ -47,8 +47,8 @@ Este projeto tem como objetivo a implementação de um algoritmo eficiente para 
  
 - **Teste com 100 e 500 números**:
   <p align="center">
-    <img src="https://github.com/user-attachments/assets/46986d4a-0322-4f2f-b2dd-ac8f7bbd9f07" style="height: 450px; width: auto; margin-right: 10px;" />
-    <img src="https://github.com/user-attachments/assets/92f6ba78-9b1d-4f93-8425-52f5725d75ac" style="height: 450px; width: auto;" />
+    <img src="https://github.com/user-attachments/assets/46986d4a-0322-4f2f-b2dd-ac8f7bbd9f07" style="height: 350px; width: auto; margin-right: 10px;" />
+    <img src="https://github.com/user-attachments/assets/92f6ba78-9b1d-4f93-8425-52f5725d75ac" style="height: 350px; width: auto;" />
   </p>
 
   ---
