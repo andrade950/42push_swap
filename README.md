@@ -49,8 +49,8 @@ This project aims to implement an efficient algorithm for sorting an integer sta
   - **Testing with 100 and 500 numbers**:
  
   <p align="center">
-    <img src="https://github.com/user-attachments/assets/46986d4a-0322-4f2f-b2dd-ac8f7bbd9f07" style="height: 450px; width: auto; margin-right: 10px;" />
-    <img src="https://github.com/user-attachments/assets/92f6ba78-9b1d-4f93-8425-52f5725d75ac" style="height: 450px; width: auto;" />
+    <img src="https://github.com/user-attachments/assets/46986d4a-0322-4f2f-b2dd-ac8f7bbd9f07" style="height: 300px; width: auto; margin-right: 10px;" />
+    <img src="https://github.com/user-attachments/assets/92f6ba78-9b1d-4f93-8425-52f5725d75ac" style="height: 300px; width: auto;" />
   </p>
 
   ---
