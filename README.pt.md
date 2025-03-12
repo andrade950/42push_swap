@@ -46,12 +46,10 @@ Este projeto tem como objetivo a implementação de um algoritmo eficiente para 
   - O script irá gerar números aleatórios, executar o `push_swap` e verificar o número de operações realizadas.
  
 - **Teste com 100 e 500 números**:
-   <table style="border-collapse: collapse; border: none;">
-    <tr>
-      <td><img width="550" src="imgs/100.png"></td>
-      <td><img width="550" src="imgs/500.png"></td>
-    </tr>
-  </table>
+  <p align="center">
+    <img src="https://github.com/user-attachments/assets/46986d4a-0322-4f2f-b2dd-ac8f7bbd9f07" style="height: 450px; width: auto; margin-right: 10px;" />
+    <img src="https://github.com/user-attachments/assets/92f6ba78-9b1d-4f93-8425-52f5725d75ac" style="height: 450px; width: auto;" />
+  </p>
 
   ---
   
